@@ -48,7 +48,11 @@ def create_image(quote):
         draw.text(((600 - w) / 2, current_h), line, font=font)
         current_h += h + pad
 
-    image_name = f'output_image/{time.time_ns()}.jpg'
-    print(image_name)
+    output_dir = 'output_image'
+    path_exists = os.path.exists(output_dir)
+    if not path_exists:
+        os.mkdir(output_dir)
+
+    image_name = f'{output_dir}/{time.time_ns()}.jpg'
     img.save(image_name)
     return os.path.abspath(image_name), image_name
