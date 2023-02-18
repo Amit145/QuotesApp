@@ -1,0 +1,10 @@
+{
+    "quote": "If you are not willing to risk the usual you will have to settle for the ordinary",
+    "author": "",
+    "tags": [],
+    "likes": 0,
+    "views": 0,
+    "shares": 0,
+    "creation_date": "26-01-2023-19:40:14.190514",
+    "id": 32
+}
