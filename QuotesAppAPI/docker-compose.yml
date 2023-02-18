@@ -3,12 +3,11 @@ services:
   quotes-web:
     build: ./quotes-web
     ports:
-      - "5000-5100:5000"
+      - "7000-7100:8000"
     links:
       - quotes-db
   quotes-db:
-    build: ./quotes-db
-  
+    build: ./quotes-db 
   nginx:
     image: nginx:latest
     volumes:

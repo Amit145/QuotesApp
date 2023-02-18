@@ -25,4 +25,4 @@ cd ./QuotesAppAPI
 docker-compose build
 
 #run
-docker-compose up
+docker-compose up --scale quotes-web=3

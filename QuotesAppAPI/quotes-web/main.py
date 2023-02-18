@@ -15,7 +15,7 @@ from imageCreator import createImage
 api = FastAPI()
 
 # MongoDB database connection
-mongoClient = MongoClient('mongodb://localhost:27017')
+mongoClient = MongoClient('mongodb://quotes-db:27017')
 db = mongoClient.QuotesDB
 collection = db["Quotes"]
 
@@ -39,7 +39,7 @@ def get_instance_id():
 
 def get_latest_id():
     quote_id = 0
-    cursor = collection.find({}, sort=[('_id', pymongo)]).limit(1)
+    cursor = collection.find({}, sort=[('_id', pymongo.DESCENDING)]).limit(1)
     for document in cursor: quote_id = document['id'] + 1
     return quote_id
 

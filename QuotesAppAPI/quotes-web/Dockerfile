@@ -3,4 +3,4 @@ WORKDIR /usr/src/app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
-CMD [ "uvicorn", "main:api","--reload" ]
+CMD ["uvicorn", "main:api", "--host", "0.0.0.0"]
