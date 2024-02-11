@@ -3,4 +3,6 @@ cd ./QuotesAppAPI
 docker-compose build
 
 REM run
-docker-compose up --scale quotes-web=1
+docker-compose up --scale quotes-web=1 -d
+
+python addToMongo.py
