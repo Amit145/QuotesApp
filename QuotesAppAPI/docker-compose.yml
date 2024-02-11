@@ -3,7 +3,7 @@ services:
   quotes-web:
     build: ./quotes-web
     ports:
-      - "7000-7100:8000"
+      - "6000-7100:4000"
     links:
       - quotes-db
   quotes-db:
@@ -16,4 +16,4 @@ services:
       - quotes-web
       - quotes-db
     ports:
-      - "80:80"
+      - "90:80"
