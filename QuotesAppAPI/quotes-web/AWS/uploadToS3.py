@@ -11,11 +11,11 @@ class AWSOperations:
 
     def __init__(self):
         self.session = boto3.Session(
-            aws_access_key_id='AKIATCVLRI3BQIXNK26B',
-            aws_secret_access_key='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'
+            aws_access_key_id='aws_access_key_id',
+            aws_secret_access_key='aws_secret_access_key'
         )
 
-        self.bucket = 'quotesapp-user-gen-images'
+        self.bucket = 'bucket'
         self.expiry = 300
 
     def upload_file(self, file_url, file_key):
